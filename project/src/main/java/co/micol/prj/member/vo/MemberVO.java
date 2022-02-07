@@ -6,10 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class MemberVO {
-	private String memId;
-	private String memPwd;
-	private String memName;
-	private String memTel;
-	private String memAddress;
-	private String memAuthor;
+	private String id;
+	private String password;
+	private String name;
+	private String tel;
+	private String address;
+	private String author;
 }

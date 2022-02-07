@@ -15,12 +15,12 @@ public class Register implements Command {
 		MemberService memberDao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
 		
-		vo.setMemId(request.getParameter("id"));
-		vo.setMemPwd(request.getParameter("password"));
-		vo.setMemName(request.getParameter("name"));
-		vo.setMemTel(request.getParameter("tel"));
-		vo.setMemAddress(request.getParameter("address"));
-		vo.setMemAuthor(request.getParameter("author"));
+		vo.setId(request.getParameter("id"));
+		vo.setPassword(request.getParameter("password"));
+		vo.setName(request.getParameter("name"));
+		vo.setTel(request.getParameter("tel"));
+		vo.setAddress(request.getParameter("address"));
+		vo.setAuthor(request.getParameter("author"));
 		
 		int r = memberDao.memberInsert(vo);
 		
