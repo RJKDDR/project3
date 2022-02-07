@@ -17,6 +17,10 @@ import co.micol.prj.command.Event;
 import co.micol.prj.command.Login;
 import co.micol.prj.command.LoginForm;
 import co.micol.prj.command.MainCommand;
+import co.micol.prj.command.NoticeList;
+import co.micol.prj.command.NoticeSelect;
+import co.micol.prj.command.NoticeWrite;
+import co.micol.prj.command.NoticeWriterFrom;
 import co.micol.prj.command.Register;
 import co.micol.prj.command.RegisterForm;
 
@@ -39,6 +43,10 @@ public class FrontController extends HttpServlet {
 		map.put("/logOut.do", new Logout());//로그아웃
 		map.put("/register.do", new Register());//회원가입
 		map.put("/event.do", new Event());//문화행사
+		map.put("/notice.do", new NoticeList()); //공지사항목록
+		map.put("/noticeWriteForm.do", new NoticeWriterFrom());
+		map.put("/noticeSelect.do", new NoticeSelect());
+		map.put("/noticeWrite.do", new NoticeWrite());
 	}
 
 	
