@@ -83,11 +83,6 @@
               주소를 입력해주세요.
             </div>
           </div>
-          
-          <div class="mb-3">
-            <label for="address">권한</label>
-            <input type="text" class="form-control" id="author" name="author" value="USER" readonly="readonly">
-          </div>
 
           <hr class="mb-4">
           <div class="custom-control custom-checkbox">
