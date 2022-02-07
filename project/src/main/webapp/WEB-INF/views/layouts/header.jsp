@@ -16,23 +16,23 @@
         <div class="navbar-collapse collapse" id="navbarContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">도서관안내</a>
+              <a class="nav-link" href="main.do">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">자료검색</a>
+              <a class="nav-link" href="librarySelect.do">자료검색</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="event.do">문화행사</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">정보광장</a>
+              <a class="nav-link" href="qna.do">회원QnA</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="notice.do">공지사항</a>
             </li>
             <c:if test="${not empty id }">
             <li class="nav-item">
-              <a class="nav-link" href="#">마이페이지</a>
+              <a class="nav-link" href="mypage.do">마이페이지</a>
             </li>
             </c:if>
             <c:if test="${empty id }">
