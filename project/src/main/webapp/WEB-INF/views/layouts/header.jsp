@@ -22,7 +22,7 @@
               <a class="nav-link" href="#">자료검색</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">문화행사</a>
+              <a class="nav-link" href="event.do">문화행사</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">정보광장</a>
