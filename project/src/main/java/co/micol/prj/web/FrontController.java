@@ -16,6 +16,7 @@ import co.micol.prj.command.Logout;
 import co.micol.prj.command.Login;
 import co.micol.prj.command.LoginForm;
 import co.micol.prj.command.MainCommand;
+import co.micol.prj.command.QnaList;
 import co.micol.prj.command.Register;
 import co.micol.prj.command.RegisterForm;
 
@@ -37,6 +38,7 @@ public class FrontController extends HttpServlet {
 		map.put("/login.do", new Login());//로그인
 		map.put("/logOut.do", new Logout());//로그아웃
 		map.put("/register.do", new Register());//회원가입
+		map.put("/qnaList.do", new QnaList()); //QnA 리스트 
 	}
 
 	
