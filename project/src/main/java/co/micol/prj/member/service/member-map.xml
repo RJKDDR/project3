@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.micol.prj.member.service.MemberMapper"> <!-- .멥퍼 인터페이스 이름으로 변경 -->
+	
+	<resultMap type="co.micol.prj.member.vo.MemberVO" id="memberMap">
+		<id property="memId" column="mem_id"/>
+		<result property="memPwd" column="mem_pwd"/>
+		<result property="memName" column="mem_name"/>
+		<result property="memTel" column="mem_tel"/>
+		<result property="memAddress" column="mem_address"/>
+		<result property="memAuthor" column="mem_author"/>
+	</resultMap>
+	
+	<select id="memberSelectList" resultType="co.micol.prj.member.vo.MemberVO">
+	  SELECT * FROM MEMBER
+	</select>
+	<select id="memberSelect" resultMap="memberMap">
+		SELECT * FROM MEMBER WHERE MEM_ID = #{memId}
+		<if test="#{memPwd} != null">
+			AND MEM_PWD = #{memPwd} <!-- AND 연산자는 두 개의 조건을 모두 만족시켜야 검색가능(로그인할때) -->
+		</if>
+	</select>
+	
+	<insert id="memberInsert" parameterType="co.micol.prj.member.vo.MemberVO">
+		INSERT INTO MEMBER(MEM_ID, MEM_PWD, MEM_NAME , MEM_TEL , MEM_ADDRESS)
+		VALUES(#{memId},#{memPwd},#{memName},#{memTel},#{memAddress})
+	</insert>
+	
+	<delete id="memberDelete" parameterType="co.micol.prj.member.vo.MemberVO">
+		DELETE FROM MEMBER WHERE MEM_ID = #{memId}
+	</delete>
+	
+	<update id="memberUpdate" parameterType="co.micol.prj.member.vo.MemberVO">
+		update member 
+		<if test="password != null">SET MEM_PWD =#{memPwd}</if> <!-- 널값으로 안넘어오면 변경 -->
+		<if test="name != null">SET MEM_NAME =#{memName}</if>
+		<if test="tel != null">SET MEM_TEL =#{memTel}</if>
+		<if test="address != null">SET MEM_ADDRESS =#{memAddress}</if>
+		<if test="author != null">SET MEM_AUTHOR =#{memAuthor}</if>
+		WHERE MEM_ID = #{memId}
+	</update>
+	
+	<!-- mybatis는 0이면 false 1이면 true , 대부분 메소드를 만들때 is를 쓰게되면  false가 디폴트값 -->
+	<select id="isIdCheck" parameterType="String" resultType="boolean">
+		SELECT CASE WHEN COUNT(*) = 1 THEN 0 ELSE 1 END AS T
+		FROM MEMBER WHERE MEM_ID = #{memId}<!-- id값은 파라미터값과 동일해야됨 -->
+	</select>
+</mapper>
