@@ -18,16 +18,16 @@ public class Login implements Command {
 		HttpSession session = request.getSession();
 		
 		
-		vo.setMemId(request.getParameter("id"));
-		vo.setMemPwd(request.getParameter("password"));
+		vo.setId(request.getParameter("id"));
+		vo.setPassword(request.getParameter("password"));
 		
 		vo = memberDao.memberSelect(vo);
 		
 		if(vo !=null) {
-			session.setAttribute("id", vo.getMemId());
-			session.setAttribute("author", vo.getMemAuthor());
-			session.setAttribute("name", vo.getMemName());
-			request.setAttribute("message", vo.getMemName() + "님 환영합니다");
+			session.setAttribute("id", vo.getId());
+			session.setAttribute("author", vo.getAuthor());
+			session.setAttribute("name", vo.getName());
+			request.setAttribute("message", vo.getName() + "님 환영합니다");
 		}else {
 			request.setAttribute("message", "아이디 또는 패스워드가 일치하지 않습니다");
 			return "member/memberLoginForm";
