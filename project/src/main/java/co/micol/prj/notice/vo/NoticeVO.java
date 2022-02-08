@@ -1,5 +1,9 @@
 package co.micol.prj.notice.vo;
 
+
+
+import java.sql.Date;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +15,6 @@ public class NoticeVO {
 	private String noticeWriter;
 	private String noticeTitle;
 	private String noticeSubject;
-	private String noticeDate;
+	private Date noticeDate;
 	private int noticeHit;
 }

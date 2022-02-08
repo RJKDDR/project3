@@ -33,7 +33,7 @@
 					<table>
 						<tbody>
 						<c:forEach items="${notices }" var="notice">
-							<tr class="row100 body" onclick="location.href='noticeSelect.do'">
+							<tr class="row100 body" onclick="location.href='noticeSelect.do?id=${notice.noticeId}'">
 								<td class="cell100 column1">${notice.noticeId }</td>
 								<td class="cell100 column2">${notice.noticeTitle }</td>
 								<td class="cell100 column3">${notice.noticeWriter }</td>
@@ -50,7 +50,7 @@
 		<br>
 		
 		<div class="row form-group mt-4">
-		<c:if test="${not empty id }">
+		<c:if test="${id == 'micol' }">
 			<div class="col-md-12">
 				<input type="submit" value="글쓰기" class="btn btn-primary" onclick="location.href='noticeWriterForm.do'">
 			</div>

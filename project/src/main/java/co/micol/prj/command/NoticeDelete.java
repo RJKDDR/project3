@@ -8,24 +8,16 @@ import co.micol.prj.notice.service.NoticeService;
 import co.micol.prj.notice.serviceImpl.NoticeServiceImpl;
 import co.micol.prj.notice.vo.NoticeVO;
 
-public class NoticeSelect implements Command {
+public class NoticeDelete implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		NoticeService noticeDao = new NoticeServiceImpl();
 		NoticeVO vo = new NoticeVO();
-		System.out.println(request.getParameter("id"));
-		vo.setNoticeId(Integer.valueOf(request.getParameter("id")));
-		vo = noticeDao.noticeSelect(vo);
+		request.setAttribute("notice", noticeDao.noticeDelete(vo));
+	
 		
-		if(vo != null) {
-			noticeDao.noticeHitUpdate(vo.getNoticeId());
-			request.setAttribute("notice", vo);
-		}else {
-			request.setAttribute("message", "조회된 데이터가 없습니다");
-			return "notice/noticeError";
-		}
-		return "notice/noticeSelect";
+		return "notice/noticeList";
 	}
 
 }
