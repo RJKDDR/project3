@@ -12,7 +12,7 @@ public class NoticeUpdate implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		
-		return "notice/noticeSelect";
+		return "notice/noticeUpdate";
 	}
 
 }

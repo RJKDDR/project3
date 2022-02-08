@@ -18,14 +18,16 @@ public class NoticeSelect implements Command {
 		vo.setNoticeId(Integer.valueOf(request.getParameter("id")));
 		vo = noticeDao.noticeSelect(vo);
 		
+		String viewPage = null;
 		if(vo != null) {
 			noticeDao.noticeHitUpdate(vo.getNoticeId());
 			request.setAttribute("notice", vo);
+			viewPage = "notice/noticeSelect";
 		}else {
 			request.setAttribute("message", "조회된 데이터가 없습니다");
-			return "notice/noticeError";
+			viewPage = "notice/noticeError";
 		}
-		return "notice/noticeSelect";
+		return viewPage;
 	}
 
 }

@@ -32,7 +32,7 @@
 		</table>
 		</div><br>
 		<div>
-		<input type="button" value="삭제" class="btn btn-primary" onclick="location.href='noticeDelete.do'">
+		<input type="button" value="삭제" class="btn btn-primary" onclick="location.href='noticeDelete.do?id=${notice.noticeId}'">
 		<input type="button" value="수정" class="btn btn-primary" onclick="location.href='noticeUpdate.do'">
 		<input type="button" value="목록" class="btn btn-primary"onclick="location.href='notice.do'">
 		</div>

@@ -32,7 +32,7 @@ public class NoticeServiceImpl implements NoticeService{
 	}
 
 	@Override
-	public int noticeDelete(NoticeVO vo) {
+	public NoticeVO noticeDelete(NoticeVO vo) {
 		// TODO Auto-generated method stub
 		return map.noticeDelete(vo);
 	}

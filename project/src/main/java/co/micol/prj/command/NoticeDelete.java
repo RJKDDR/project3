@@ -14,8 +14,10 @@ public class NoticeDelete implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		NoticeService noticeDao = new NoticeServiceImpl();
 		NoticeVO vo = new NoticeVO();
-		request.setAttribute("notice", noticeDao.noticeDelete(vo));
-	
+		vo.setNoticeId(Integer.valueOf(request.getParameter("id")));
+		vo = noticeDao.noticeDelete(vo);
+		
+		
 		
 		return "notice/noticeList";
 	}
