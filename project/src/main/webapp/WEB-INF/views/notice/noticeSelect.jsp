@@ -26,13 +26,13 @@
 			<tr>
 			<th>내용</th>
 			<td colspan="5">
-			<textarea rows="10" cols="100">${notice.noticeSubject }</textarea>
+			<textarea rows="10" cols="100">${noticeSubject }</textarea>
 			</td>
 			</tr>
 		</table>
 		</div><br>
 		<div>
-		<button type="button" onclick="location.href='noticeList.do'">목록</button>&nbsp;&nbsp;
+		<button type="button" onclick="location.href='notice.do'">목록</button>&nbsp;&nbsp;
 		</div>
 	</div>
 </body>

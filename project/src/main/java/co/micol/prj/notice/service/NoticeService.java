@@ -13,6 +13,6 @@ public interface NoticeService {
 	int noticeUpdate(NoticeVO vo);
 	
 	void noticeHitUpdate(int id);
-	List<NoticeVO> noticeSearch(String key, String str);
+	
 
 }

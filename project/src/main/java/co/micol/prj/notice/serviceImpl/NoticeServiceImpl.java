@@ -49,10 +49,5 @@ public class NoticeServiceImpl implements NoticeService{
 		
 	}
 
-	@Override
-	public List<NoticeVO> noticeSearch(String key, String str) {
-		// TODO Auto-generated method stub
-		return map.noticeSearch(key, str);
-	}
-
+	
 }

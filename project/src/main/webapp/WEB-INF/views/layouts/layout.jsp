@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="assets/css/theme.css">
+  
+  <link rel="stylesheet" href="assets/css/noticeListStyle.css">
+
 
 </head>
 <body>
@@ -36,5 +39,6 @@
 <script src="assets/vendor/wow/wow.min.js"></script>
 
 <script src="assets/js/theme.js"></script>
+
 </body>
 </html>
