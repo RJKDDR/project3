@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,15 +26,12 @@
 			</tr>
 			<tr>
 			<th>내용</th>
-			<td colspan="5">
-			<textarea rows="10" cols="100">${notice.noticeSubject }</textarea>
-			</td>
+			<td colspan="5">${notice.noticeSubject }</td>
+			
 			</tr>
 		</table>
 		</div><br>
 		<div>
-		<input type="button" value="삭제" class="btn btn-primary" onclick="location.href='noticeDelete.do?id=${notice.noticeId}'">
-		<input type="button" value="수정" class="btn btn-primary" onclick="location.href='noticeUpdate.do'">
 		<input type="button" value="목록" class="btn btn-primary"onclick="location.href='notice.do'">
 		</div>
 	</div>

@@ -27,12 +27,16 @@ public class Login implements Command {
 			session.setAttribute("id", vo.getId());
 			session.setAttribute("author", vo.getAuthor());
 			session.setAttribute("name", vo.getName());
+			session.setAttribute("tel", vo.getTel());
+			session.setAttribute("address", vo.getAddress());
+			session.setAttribute("password", vo.getPassword());
+			
 			request.setAttribute("message", vo.getName() + "님 환영합니다");
+			return "member/memberLoginResult";
 		}else {
 			request.setAttribute("message", "아이디 또는 패스워드가 일치하지 않습니다");
-			return "member/memberLoginForm";
+			return "member/memberLoginError";
 		}
-		return "member/memberLoginResult";
 	}
 
 }

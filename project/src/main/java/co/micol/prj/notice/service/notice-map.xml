@@ -32,7 +32,7 @@ SELECT * FROM NOTICE WHERE NOTICE_ID = #{noticeId}
       </selectKey>
          INSERT INTO NOTICE(NOTICE_ID, NOTICE_WRITER, NOTICE_TITLE, NOTICE_SUBJECT, NOTICE_DATE)
          VALUES (#{noticeId}, #{noticeWriter}, #{noticeTitle}, #{noticeSubject}, #{noticeDate})
-   </insert>
+</insert>
 
 <delete id="noticeDelete" parameterType="co.micol.prj.notice.vo.NoticeVO">
 DELETE FROM NOTICE WHERE NOTICE_ID = #{noticeId}
@@ -40,12 +40,7 @@ DELETE FROM NOTICE WHERE NOTICE_ID = #{noticeId}
 
 <update id="noticeUpdate" parameterType="co.micol.prj.notice.vo.NoticeVO">
 UPDATE NOTICE
-<set>
-<if test ="noticeWriter != null"> NOTICE_WIRTER = #{noticeWriter},</if>
-<if test ="noticeTitle != null"> NOTICE_TITLE = #{noticeTitle},</if>
-<if test ="noticeSubject != null"> NOTICE_SUBJECT = #{noticeSubject},</if>
-<if test ="noticeDate != null"> NOTICE_DATE = #{noticeDate}</if>
-</set>
+	SET NOTICE_TITLE = NVL(#{noticeTitle},NOTICE_TITLE), NOTICE_SUBJECT = NVL(#{noticeSubject}, NOTICE_SUBJECT)
 WHERE NOTICE_ID = #{noticeId}
 </update>
 

@@ -1,6 +1,5 @@
 package co.micol.prj.command;
 
-import java.io.IOException;
 import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;

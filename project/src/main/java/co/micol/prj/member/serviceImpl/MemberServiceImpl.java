@@ -49,4 +49,10 @@ public class MemberServiceImpl implements MemberService {
 		return map.isIdCheck(id);
 	}
 
+	@Override
+	public int userCheck(String id, String password) {
+		// TODO Auto-generated method stub
+		return map.userCheck(id, password);
+	}
+
 }

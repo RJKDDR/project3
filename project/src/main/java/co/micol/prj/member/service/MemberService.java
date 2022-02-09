@@ -10,6 +10,7 @@ public interface MemberService {
 	int memberInsert(MemberVO vo);
 	int memberDelete(MemberVO vo);
 	int memberUpdate(MemberVO vo);
+	int userCheck(String id,String password);
 	
 	boolean isIdCheck(String id);
 }

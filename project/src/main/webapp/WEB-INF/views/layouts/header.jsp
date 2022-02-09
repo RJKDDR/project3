@@ -25,7 +25,7 @@
               <a class="nav-link" href="event.do">문화행사</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="qna.do">회원QnA</a>
+              <a class="nav-link" href="qnaList.do">회원QnA</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="notice.do">공지사항</a>

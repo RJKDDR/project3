@@ -5,21 +5,7 @@
 <html lang="kr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <meta name="copyright" content="MACode ID, https://macodeid.com/">
-
-  <title>SeoGram - SEO Agency Template</title>
-
-  <link rel="stylesheet" href="../assets/css/maicons.css">
-
-  <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
-  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
-
-  <link rel="stylesheet" href="../assets/css/theme.css">
+  
 </head>
 <body>
 
@@ -27,50 +13,13 @@
   <div class="back-to-top"></div>
   
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="300">
-      <div class="container">
-        <a href="#" class="navbar-brand">YEDAM<span class="text-primary">Library</span></a>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="navbar-collapse collapsed" id="navbarContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">메인페이지</a>
-            </li>
-           
-            <li class="nav-item active">
-              <a class="nav-link" href="blog.html">인기도서</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">캘린더</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Q&A</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="service.html">빈목차</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="btn btn-primary ml-lg-2" href="#">마이페이지</a>
-            </li>
-            
-          </ul>
-        </div>
-
-      </div>
-    </nav>
-
-    <div class="container">
+    <div class="container" >
       <div class="page-banner">
         <div class="row justify-content-center align-items-center h-100">
           <div class="col-md-6">
+      	<!--  img src="assets/img/library.jpg"-->
             <nav aria-label="Breadcrumb">
               <ul class="breadcrumb justify-content-center py-0 bg-transparent">
               </ul>
@@ -100,7 +49,10 @@
             </div>
           </form>
         </div>
+        
+        <!-- 관리자만 글쓰기 보이게 해서 인기도서 올리는 버튼 -->
         <div class="col-sm-2 text-sm-right">
+         <input type="submit"  value="글쓰기" onclick="location.href='bestBookForm.do'">
         </div>
       </div>
 
@@ -114,7 +66,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>
@@ -128,7 +80,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>
@@ -142,7 +94,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>
@@ -156,7 +108,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>
@@ -170,7 +122,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>
@@ -184,7 +136,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>
@@ -198,7 +150,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>
@@ -212,7 +164,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>
@@ -226,7 +178,7 @@
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
+              <h5 class="post-title"><a href="bestBookDetail.do">도서명</a></h5>
               <div class="post-date">출판사명  <a>지은이</a></div>
             </div>
           </div>

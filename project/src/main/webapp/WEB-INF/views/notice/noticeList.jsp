@@ -33,13 +33,26 @@
 					<table>
 						<tbody>
 						<c:forEach items="${notices }" var="notice">
+						<c:if test="${id != 'micol' }">
 							<tr class="row100 body" onclick="location.href='noticeSelect.do?id=${notice.noticeId}'">
+						
 								<td class="cell100 column1">${notice.noticeId }</td>
 								<td class="cell100 column2">${notice.noticeTitle }</td>
 								<td class="cell100 column3">${notice.noticeWriter }</td>
 								<td class="cell100 column4">${notice.noticeDate }</td>
 								<td class="cell100 column5">${notice.noticeHit }</td>
 							</tr>
+							</c:if>
+							<c:if test="${id == 'micol' }">
+							<tr class="row100 body" onclick="location.href='noticeUpdateForm.do?id=${notice.noticeId}'">
+						
+								<td class="cell100 column1">${notice.noticeId }</td>
+								<td class="cell100 column2">${notice.noticeTitle }</td>
+								<td class="cell100 column3">${notice.noticeWriter }</td>
+								<td class="cell100 column4">${notice.noticeDate }</td>
+								<td class="cell100 column5">${notice.noticeHit }</td>
+							</tr>
+							</c:if>
 							</c:forEach>							
 						</tbody>
 					</table>
@@ -55,6 +68,7 @@
 				<input type="submit" value="글쓰기" class="btn btn-primary" onclick="location.href='noticeWriterForm.do'">
 			</div>
 			</c:if>
+			
 			<div>
 				<form id="frm" action="noticeSelect.do" method="post">
 					<input type="hidden" id="noticeId" name="noticeId">

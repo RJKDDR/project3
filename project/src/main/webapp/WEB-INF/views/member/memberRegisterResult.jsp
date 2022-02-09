@@ -7,11 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="../main/main.jsp"/>
+	
 </body>
 
 <script>
+	location.href = "main.do";
 	alert('${message}')
-</script>
+</script>	
 
 </html>

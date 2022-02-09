@@ -6,7 +6,7 @@
       <div class="row mb-5">
         <div class="col-lg-3 py-3">
           <h3>Yedam도서관</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis in iusto eligendi iure.</p>
+          <p></p>
 
           <div class="social-media-button">
             <a href="#"><span class="mai-logo-facebook-f"></span></a>

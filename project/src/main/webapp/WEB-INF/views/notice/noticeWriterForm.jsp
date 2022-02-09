@@ -17,9 +17,9 @@
 			<table border="1">
 			<tr>
 			<th width="50">제목</th>
-			<td width="50"><input type="text" id="noticeTitle" name="noticeTitle" ></td>
+			<td width="100"><input type="text" id="noticeTitle" name="noticeTitle">${notice.noticeTitle }</td>
 			<th width="50">작성일자</th>
-			<td width="50"><input type="date" id="noticeDate" name="noticeDate"></td>
+			<td width="50"><input type="date" id="noticeDate" name="noticeDate">${notice.noticeDate }</td>
 			</tr>
 			<tr>
 			<th width="100">작성자</th>
@@ -27,7 +27,7 @@
 			</tr>
 			<tr>
 			<th>내 용</th>
-			<td colspan="3"><textarea rows="10" cols="59" id="noticeSubject" name="noticeSubject"></textarea></td>
+			<td colspan="3"><textarea rows="10" cols="59" id="noticeSubject" name="noticeSubject">${notice.noticeSubject }</textarea></td>
 			</tr>
 			</table>
 
