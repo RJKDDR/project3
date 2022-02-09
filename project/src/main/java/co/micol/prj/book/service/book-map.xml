@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.micol.prj.book.service.bookMapper">
+
+	<select id="bookSelectList" resultType="co.micol.prj.book.vo.BookVO">
+		SELECT * FROM BOOK
+	</select>
+	
+	<select id="bookSelect" resultType="co.micol.prj.book.vo.BookVO">
+		SELECT * FROM BOOK WHERE BOOK_NAME = #{bookName}
+	</select>
+
+	<insert id="bookInsert" parameterType="co.micol.prj.book.vo.BookVO">
+		INSERT INTO BOOK(BOOK_SEQ.NEXTVAL, BOOK_NO, BOOK_NAME, BOOK_WRITER, BOOK_STORY, BOOK_IMAGE
+		 VALUES(#{bookNo}, #{bookName}, #{bookWriter}, #{bookStory}, #{bookImage})
+	</insert>
+	
+	<update id="bookUpdate" parameterType="co.micol.prj.book.vo.BookVO">
+		UPDATE book
+			<!-- if test의 내용이 값이 없지 않을 때 key와 값 업데이트한다는 내용 UPDATE 조건문은 set바깥에쓴다. -->
+			<set>
+				<if test="BookName != null">BOOK_NAME = #{bookName},</if> 
+				<if test="BookWriter != null">BOOK_WRITER = #{bookWriter},</if>
+				<if test="bookStory != null">BOOK_STROY = #{bookStory},</if>
+				<if test="bookImage != null">BOOK_IMAGE = #{bookImage},</if>
+			</set>
+				 WHERE BOOK_NAME=#{bookName}
+	
+	</update>
+	
+	<delete id="bookDelete" parameterType="co.micol.prj.book.vo.BookVO">
+		DELETE FROM BOOK WHERE BOOK_NAME=#{bookName}
+	
+	</delete>
+	
+	
+	
+</mapper>
