@@ -22,7 +22,7 @@
 	<delete id="boardDelete" parameterType="co.micol.prj.board.vo.BoardVO">
 		DELETE FROM BOARD WHERE BIDX = #{BIdx}
 	</delete>
-
+	
 	<update id="boardHit" parameterType="int">
 		UPDATE BOARD SET BHIT = BHIT + 1 WHERE BIDX = #{BIdx}
 	</update>

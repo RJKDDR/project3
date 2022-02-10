@@ -13,3 +13,4 @@ public interface BoardMapper {
 
 	void boardHit(int id);
 }
+
