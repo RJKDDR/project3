@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,15 +29,18 @@
 					</div>
 					<div class="nav flex-column nav-pills" id="v-pills-tab"
 						role="tablist" aria-orientation="vertical">
-						<a class="nav-link active" id="account-tab" data-toggle="pill"
-							href="#account" role="tab" aria-controls="account"
-							aria-selected="true"> <i class="fa fa-user text-center mr-1"></i>
-							회원정보수정
-						</a><a class="nav-link" id="security-tab" data-toggle="pill"
-							href="#security" role="tab" aria-controls="security"
-							aria-selected="false"> <i class="fa fa-home text-center mr-1"></i>
+						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
+							aria-controls="account" aria-selected="true"> <i class="fa fa-user text-center mr-1"></i>
+							회원정보수정</a>
+							<a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab"
+								aria-controls="application" aria-selected="false"> <i
+									class="fa fa-tv text-center mr-1"></i>
+								회원목록
+							</a>
+						<a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab"
+							aria-controls="security" aria-selected="false"> <i class="fa fa-home text-center mr-1"></i>
 							회원탈퇴
-						</a> 
+						</a>
 					</div>
 				</div>
 				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
@@ -80,14 +84,50 @@
 							</div>
 						</form>
 					</div>
-					<div class="tab-pane fade" id="security" role="tabpanel"
-						aria-labelledby="security-tab">
-						<form action="memberDelete.do" method="post">
-						<div>
-							<button class="btn btn-primary" >회원탈퇴</button>
-							<input type="hidden" name="id" id="id" value="${member.id }">
+						<div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+							<form action="memberDelete.do" method="post">
+								<div class="mb-3 row">
+									<label for="staticEmail" class="col-sm-2 col-form-label">Id</label>
+									<div class="col-sm-10">
+										<input type="text" readonly class="form-control-plaintext" id="id" name="id"
+											value="${id }">
+									</div>
+								</div>
+								<div class="mb-3 row">
+									<label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control" id="password" name="password"
+											value=""><br>
+									</div>
+									<div>
+										<input type="submit" class="btn btn-primary" value="회원탈퇴">
+									</div>
+								</div>
+							</form>
 						</div>
-						</form>
+					<div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">Id</th>
+										<th scope="col">Name</th>
+										<th scope="col">Tel</th>
+										<th scope="col">Address</th>
+									</tr>
+								</thead>
+								<tbody>
+									<c:forEach items="${memberList}" var="member">
+										<tr>
+											<td>${member.id }</td>
+											<td>${member.name }</td>
+											<td>${member.tel }</td>
+											<td>${member.address }</td>
+										</tr>
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>

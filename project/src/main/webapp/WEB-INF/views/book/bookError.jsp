@@ -4,12 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title></title>
 </head>
 <body>
-<script>
-	location.href = "main.do";
-	alert('${message}')
-</script>
+<h1>Error</h1> 
+
 </body>
 </html>

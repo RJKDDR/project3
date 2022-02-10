@@ -15,25 +15,27 @@ public class MemberDelete implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		MemberService memberDao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
-		//HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		request.setAttribute("member", vo.getId());
 		vo.setId(request.getParameter("id"));
+		vo.setPassword(request.getParameter("password"));
 		
 		System.out.println(vo.getId());
 		
+		String viewPage= null;
 		int r = memberDao.memberDelete(vo);
 		if(r != 0) {
 			request.setAttribute("message", "정상적으로 회원탈퇴가 되었습니다");
 			//session.setAttribute("id", vo.getId());
-			return "main.do";
+			session.invalidate();
+			viewPage ="member/memberDeleteResult";
 		}else {
 			request.setAttribute("message", "회원탈퇴가 되지 않았습니다");
-			
-		
+			viewPage = "member/memberDeleteError";
+				
 		}
 		
-		
-		return "member/memberDeleteResult";
+		return viewPage;
 	}
 
 }

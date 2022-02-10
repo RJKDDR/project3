@@ -16,11 +16,14 @@ import co.micol.prj.command.Logout;
 import co.micol.prj.command.BestBook;
 import co.micol.prj.command.BestBookDetail;
 import co.micol.prj.command.BestBookForm;
+import co.micol.prj.command.BestBookInsert;
+import co.micol.prj.command.BestBookInsertForm;
 import co.micol.prj.command.BoardDelete;
 import co.micol.prj.command.BoardSelect;
 import co.micol.prj.command.BoardUpdate;
 import co.micol.prj.command.BoardWrite;
 import co.micol.prj.command.BoardWriteForm;
+import co.micol.prj.command.BookList;
 import co.micol.prj.command.Event;
 import co.micol.prj.command.Login;
 import co.micol.prj.command.LoginForm;
@@ -67,15 +70,17 @@ public class FrontController extends HttpServlet {
 		
 		//book
 		map.put("/librarySelect.do", new BestBook()); // 인기도서
+		map.put("/bestBookForm.do", new BestBookForm()); // 인기도서 메인페이지 (이미지 3개 + 더보기란)
+		map.put("/bestBookInsertForm.do", new BestBookInsertForm()); //인기도서페이지에서 인기도서 테이블 페이지 이동 요청하는 command
+		map.put("/bookList.do", new BookList()); // 인기도서 테이블페이지
 		map.put("/bestBookDetail.do", new BestBookDetail()); // 인기도서 상세페이지
-		map.put("/bestBookForm.do", new BestBookForm()); // 관리자만, 인기도서 글쓰기 
+		map.put("/bestBookInsert.do", new BestBookInsert()); // 인기도서 등록(관리자만)
 	
 		//mypage
 		map.put("/mypage.do", new MyPage());//마이페이지
 		map.put("/memberUpdateForm.do", new MemberUpdateForm());//회원정보수정
 		map.put("/memberDelete.do", new MemberDelete());//회원탈퇴
 		map.put("/memberSelect.do", new MemberSelect()); //회원검색
-		map.put("/memberSelectList.do", new MemberSelectList());//회원리스트
 		
 		//Q&A
 		map.put("/qnaList.do", new QnaList()); //QnA 게시판

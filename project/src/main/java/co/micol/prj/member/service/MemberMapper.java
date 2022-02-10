@@ -7,6 +7,7 @@ import co.micol.prj.member.vo.MemberVO;
 public interface MemberMapper {
 	List<MemberVO> memberSelectList();
 	MemberVO memberSelect(MemberVO vo);
+	MemberVO memberSelectOne(MemberVO vo);
 	int memberInsert(MemberVO vo);
 	int memberDelete(MemberVO vo);
 	int memberUpdate(MemberVO vo);

@@ -55,4 +55,10 @@ public class MemberServiceImpl implements MemberService {
 		return map.userCheck(id, password);
 	}
 
+	@Override
+	public MemberVO memberSelectOne(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return map.memberSelectOne(vo);
+	}
+
 }

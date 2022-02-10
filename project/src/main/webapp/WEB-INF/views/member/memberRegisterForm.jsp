@@ -42,23 +42,35 @@
       <div class="input-form col-md-12 mx-auto">
         <h4 class="mb-3">회원가입</h4>
         <form class="validation-form" novalidate id="frm" action="register.do" method="post">
+          
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="name">아이디</label>
+              <label for="id">아이디</label>
               <input type="text" class="form-control" id="id" name="id" placeholder="Id" value="" required>
-              <div class="invalid-feedback">
-                아이디를 입력해주세요.
-              </div>
-            </div>
+              	<div class="invalid-feedback ">
+               		 아이디를 입력해주세요.
+              	</div>
+            </div><br>
+              	<div class="col-md-6 mb-3"  ><br>
+   					<button style="" type="button" class="btn btn-primary btn-user btn-block"  id="idKey" onclick="idCheck()" value="No">ID 중복체크</button>
+ 				</div>	
+          </div>
+          <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="nickname">비밀번호</label>
-              <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="" required>
+              <label for="password">비밀번호</label>
+              		<input type="password" class="form-control" id="password" name="password" placeholder="Password" value="" required>
               <div class="invalid-feedback">
                 비밀번호를 입력해주세요.
               </div>
             </div>
-          </div>
-
+            <div class="col-md-6 mb-3">
+            <label for="password">비밀번호</label>
+           		<input type="password" class="form-control form-control-user" id="repeatPassword" placeholder="Repeat Password" value="" required="required">
+           		<div class="invalid-feedback">
+           		비빌번호를 한번더 입력해주세요
+          	</div>
+           </div> 
+		</div>
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="name">이름</label>
@@ -113,6 +125,43 @@
         }, false);
       });
     }, false);
+    
+    function idCheck() { // 아이디 중복체크 함수 ajax(호출한 페이지에 결과를 받는 것.)이용
+
+        $.ajax({
+           url : "idCheck.do",
+           type : "post",
+           data : {id : $("#id").val()}, //id값이 id인 변수의 value값
+           dataType: "text",
+           success : function(data){ // data는 결과값(처리 후 돌아온 값을 data라고 관례적으로 쓴다. str이라고 적어도 문제 없음.)
+              if(data =="0"){
+                 alert($("#id").val() + "\n 이미 존재하는 아이디 입니다.");
+                 $("#id").val("");
+                 $("#id").focus();  // 이미존재하는 아이디일 때 박스를 확인 하고나면 ID란에 그대로 포커스를 맞춘다.
+
+              }else{
+                 alert($("#id").val() + "\n 사용가능한 아이디 입니다.");
+                 $("#idKey").val("Yes");
+              }
+           }
+        });
+     }
+      
+      function checkForm(){//
+         if($("#idKey").val() != "Yes"){  // id중복체크와 yes와 같지 않으면 (중복체크 안했을 때)
+            alert("아이디 중복 체크를 해주세요.");
+            return false;
+         }
+         if($("#password").val() !=$("#repeatPassword").val()){
+            alert("패스워드가 일치하지 않습니다.");
+            $("#password").val();
+            $("#repeatPassword").val();
+            $("#password").focus;
+            return false;
+         }
+         return true;
+      }
+    
   </script>
 </body>
 </html>

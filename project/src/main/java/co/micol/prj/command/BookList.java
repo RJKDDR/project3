@@ -1,5 +1,7 @@
 package co.micol.prj.command;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -8,20 +10,17 @@ import co.micol.prj.book.serviceImpl.BestBookServiceImpl;
 import co.micol.prj.book.vo.BookVO;
 import co.micol.prj.comm.Command;
 
-public class BestBookDetail implements Command {
+public class BookList implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-
-		BestBookService selectOneDao = new BestBookServiceImpl();
+		BestBookService bestBookServiceDao = new BestBookServiceImpl();
+		List<BookVO> list =  bestBookServiceDao.bookSelectList();
 		
-		BookVO vo = new BookVO();
+		request.setAttribute("books", list);
 		
-		vo.setBookName(request.getParameter("bookName"));
+		return "book/bookList";
 		
-		int n = selectOneDao.bookSelect(vo);
-		
-		return "book/bestBookDetail";
 	}
 
 }

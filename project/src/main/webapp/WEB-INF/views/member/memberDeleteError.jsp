@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+</body>
 <script>
-	location.href = "main.do";
+	location.href = "mypage.do";
 	alert('${message}')
 </script>
-</body>
 </html>

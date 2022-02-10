@@ -24,8 +24,8 @@ public class MemberUpdateForm implements Command {
 		vo.setTel(request.getParameter("tel"));
 		vo.setAddress(request.getParameter("address"));
 		
+		String viewPage = null;
 		int r = memberDao.memberUpdate(vo);
-		
 		if(r != 0) {
 			request.setAttribute("message", "회원정보수정이 완료 되었습니다");
             session.setAttribute("id", vo.getId());
@@ -34,13 +34,13 @@ public class MemberUpdateForm implements Command {
             session.setAttribute("tel", vo.getTel());
             session.setAttribute("address", vo.getAddress());
             session.setAttribute("password", vo.getPassword());
-            return "member/memberUpdateResult";
+            viewPage =  "member/memberUpdateResult";
             
 		}else {
 			request.setAttribute("message", "회원정보수정이 되지 않았습니다");
+			viewPage =  "member/memberUpdateResult";
 		}
-		
-		return "member/memberUpdateResult";
+		return viewPage;
 	}
 
 }
