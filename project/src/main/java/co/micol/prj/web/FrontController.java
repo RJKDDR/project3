@@ -40,6 +40,8 @@ import co.micol.prj.command.NoticeWriterForm;
 import co.micol.prj.command.QnaList;
 import co.micol.prj.command.Register;
 import co.micol.prj.command.RegisterForm;
+import co.micol.prj.command.ReplyDelete;
+import co.micol.prj.command.ReplyWrite;
 
 
 @WebServlet("*.do")
@@ -81,7 +83,9 @@ public class FrontController extends HttpServlet {
 		map.put("/boardWrite.do", new BoardWrite()); // QnA글쓰기 명령
 		map.put("/boardSelect.do", new BoardSelect());//QnA 글 상세보기
 		map.put("/boardUpdate.do", new BoardUpdate()); //QnA 글 수정
-		map.put("/boardDelete.do", new BoardDelete());
+		map.put("/boardDelete.do", new BoardDelete()); //QnA 글 삭제
+		map.put("/replyWrite.do", new ReplyWrite()); //QnA게시글 댓글입력
+		map.put("/replyDelete.do", new ReplyDelete()); //QnA 게시글 댓글삭제
 		
 		//공지사항
 		map.put("/notice.do", new NoticeList()); //공지사항목록

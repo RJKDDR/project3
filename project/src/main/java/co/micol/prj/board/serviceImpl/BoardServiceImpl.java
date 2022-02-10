@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import co.micol.prj.board.service.BoardMapper;
 import co.micol.prj.board.service.BoardService;
 import co.micol.prj.board.vo.BoardVO;
+import co.micol.prj.board.vo.ReplyVO;
 import co.micol.prj.comm.DataSource;
 
 public class BoardServiceImpl implements BoardService {
@@ -40,6 +41,26 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void boardHit(int id) {
 		map.boardHit(id);
+	}
+
+	@Override
+	public List<ReplyVO> replyList() {
+		return map.replyList();
+	}
+
+	@Override
+	public int replyInsert(ReplyVO vo) {
+		return map.replyInsert(vo);
+	}
+
+	@Override
+	public int replyUpdate(ReplyVO vo) {
+		return map.replyUpdate(vo);
+	}
+
+	@Override
+	public int replyDelete(ReplyVO vo) {
+		return map.replyDelete(vo);
 	}
 
 	

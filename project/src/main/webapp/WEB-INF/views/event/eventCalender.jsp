@@ -70,7 +70,11 @@
 </head>
 <body>
 
-  <div id='calendar'></div>
+  <div id='calendar'>
+  <form action="eventCalender.do" method="post">
+  
+  </form>
+  </div>
 
 </body>
 </html>

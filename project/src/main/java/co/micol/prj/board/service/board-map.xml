@@ -22,8 +22,32 @@
 	<delete id="boardDelete" parameterType="co.micol.prj.board.vo.BoardVO">
 		DELETE FROM BOARD WHERE BIDX = #{BIdx}
 	</delete>
-	
+
 	<update id="boardHit" parameterType="int">
 		UPDATE BOARD SET BHIT = BHIT + 1 WHERE BIDX = #{BIdx}
 	</update>
+	
+	
+	
+	
+	
+	
+	<select id="replyList" resultType="co.micol.prj.board.vo.ReplyVO">
+		SELECT * FROM REPLY ORDER BY REPLYID 
+	</select>
+	
+	<insert id="replyInsert" parameterType="co.micol.prj.board.vo.ReplyVO">
+		INSERT INTO REPLY(REPLYID,REWRITER,RECONTENT,REDATE,BIDX)
+		VALUES(reply_seq.nextval,#{reWriter},#{reContent},sysdate,#{BIdx})
+	</insert>
+	
+	<update id="replyUpdate" parameterType="co.micol.prj.board.vo.ReplyVO">
+		UPDATE REPLY SET RECONTENT = #{reContent}
+		WHERE REPLYID = #{replyId}
+	</update>
+	
+	<delete id="replyDelete" parameterType="co.micol.prj.board.vo.ReplyVO">
+		DELETE FROM REPLY WHERE REPLYID = #{replyId}
+	</delete>
+	
 </mapper>
