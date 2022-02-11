@@ -1,76 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
     
 <!DOCTYPE html>
 <html lang="kr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <meta name="copyright" content="MACode ID, https://macodeid.com/">
-
-  <title>SeoGram - SEO Agency Template</title>
-
-  <link rel="stylesheet" href="../assets/css/maicons.css">
-
-  <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
-  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
-
-  <link rel="stylesheet" href="../assets/css/theme.css">
+  
 </head>
 <body>
-
   <!-- Back to top button -->
   <div class="back-to-top"></div>
   
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="300">
-      <div class="container">
-        <a href="#" class="navbar-brand">YEDAM<span class="text-primary">Library</span></a>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="navbar-collapse collapsed" id="navbarContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">메인페이지</a>
-            </li>
-           
-            <li class="nav-item active">
-              <a class="nav-link" href="blog.html">인기도서</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">캘린더</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Q&A</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="service.html">빈목차</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="btn btn-primary ml-lg-2" href="#">마이페이지</a>
-            </li>
-            
-          </ul>
-        </div>
-
-      </div>
-    </nav>
-
-    <div class="container">
+    <div class="container" >
       <div class="page-banner">
         <div class="row justify-content-center align-items-center h-100">
           <div class="col-md-6">
+      	<!--  img src="assets/img/library.jpg"-->
             <nav aria-label="Breadcrumb">
               <ul class="breadcrumb justify-content-center py-0 bg-transparent">
               </ul>
@@ -100,7 +50,10 @@
             </div>
           </form>
         </div>
+        
+        <!-- 관리자만 글쓰기 보이게 해서 인기도서 올리는 버튼 -->
         <div class="col-sm-2 text-sm-right">
+         <input type="submit"  value="글쓰기" onclick="location.href='bestBookForm.do'">
         </div>
       </div>
 
@@ -110,26 +63,27 @@
             <div class="header">
               <div class="post-thumb">
               <!-- 이미지, 도서명, 출판사명, 지은이 모두 DB와 연결하여 데이터 가져오기 -->
-                <img src="../assets/img/blog/blog-1.jpg" alt="">
+                <img src="assets/img/youTrue.png" alt="">
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
+              <h5 class="post-title"><a href="bestBookDetail.do">당신이 옳다 : 정혜신의 적정심리학</a></h5>
+              <div class="post-date">출판사 : 해냄  <a>지은이 : 정혜신</a></div>
             </div>
           </div>
         </div>
+        
         
         <div class="col-lg-4 py-3">
           <div class="card-blog">
             <div class="header">
               <div class="post-thumb">
-                <img src="../assets/img/blog/blog-2.jpg" alt="">
+                <img src="assets/img/summer.png" alt="">
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
+              <h5 class="post-title"><a href="bestBookDetail.do">바깥은<br>여름</a></h5>
+              <div class="post-date">출판사 : 문학동네  <a>지은이 : 김애란</a></div>
             </div>
           </div>
         </div>
@@ -138,126 +92,21 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-thumb">
-                <img src="../assets/img/blog/blog-3.jpg" alt="">
+                <img src="assets/img/smile.png" alt="">
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
+              <h5 class="post-title"><a href="bestBookDetail.do">무례한 사람에게 웃으며 대처하는 법</a></h5>
+              <div class="post-date">출판사 : 가나출판사  <a>지은이 : 정문정</a></div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="../assets/img/blog/blog-4.jpg" alt="">
-              </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="../assets/img/blog/blog-5.jpg" alt="">
-              </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="../assets/img/blog/blog-6.jpg" alt="">
-              </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="../assets/img/blog/blog-1.jpg" alt="">
-              </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="../assets/img/blog/blog-2.jpg" alt="">
-              </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="../assets/img/blog/blog-3.jpg" alt="">
-              </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">도서명</a></h5>
-              <div class="post-date">출판사명  <a>지은이</a></div>
-            </div>
-          </div>
-        </div>
-
       </div>
+        
+ 
 
-      <nav aria-label="Page Navigation">
-        <ul class="pagination justify-content-center">
-        <!-- page-item disabled : 누를수 없도록 비활성화 시킨상태(회색으로 보여진다.), page-item active: 활성화 상태(파란색으로 보여진다.) -->
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">맨처음으로</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
-          	<!-- sr-only : 웹상에서는 안나타나고, 작업시에만 보임 -->
-            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link" href="#">5</a></li>
-          <li class="page-item"><a class="page-link" href="#">6</a></li>
-          <li class="page-item"><a class="page-link" href="#">7</a></li>
-          <li class="page-item"><a class="page-link" href="#">8</a></li>
-          <li class="page-item"><a class="page-link" href="#">9</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
-
+      
+ <input type="button" value="더보기" class="btn btn-primary" onclick="location.href='bookList.do'">
     </div>
   </div>
 
@@ -304,6 +153,8 @@
 
       <p class="text-center" id="copyright">Copyright &copy; 2022. This template design and develop by <a href="https://macodeid.com/" target="_blank">MACode ID</a></p>
     </div>
+    
+    
   </footer>
 
 <script src="../assets/js/jquery-3.5.1.min.js"></script>

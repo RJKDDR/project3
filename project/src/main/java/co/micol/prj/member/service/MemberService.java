@@ -7,7 +7,7 @@ import co.micol.prj.member.vo.MemberVO;
 public interface MemberService {
 	List<MemberVO> memberSelectList();
 	MemberVO memberSelect(MemberVO vo);
-	int memberInsert(MemberVO vo);
+	int memberInsert(MemberVO vo); 
 	int memberDelete(MemberVO vo);
 	int memberUpdate(MemberVO vo);
 	

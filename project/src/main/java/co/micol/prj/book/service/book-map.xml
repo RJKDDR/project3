@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.micol.prj.book.service.BookMapper">
+
+<resultMap type="co.micol.prj.book.vo.BookVO" id="bookMap">
+<id property="bookNo" column="book_no"/>
+<result property="bookName" column="book_name"/>
+<result property="bookWriter" column="book_writer"/>
+<result property="bookCompany" column="book_company"/>
+<result property="bookStory" column="book_story"/>
+<result property="bookImage" column="book_image"/>
+</resultMap>
+
+	<select id="bookSelectList" resultMap="bookMap">
+		SELECT BOOK_NO, BOOK_NAME, BOOK_WRITER, BOOK_COMPANY
+		FROM BOOK
+	</select>
+	
+	<select id="bookSelect" resultType="co.micol.prj.book.vo.BookVO">
+		SELECT * FROM BOOK WHERE BOOK_NAME = #{bookName}
+	</select>
+
+	<insert id="bookInsert" parameterType="co.micol.prj.book.vo.BookVO">
+		<selectKey keyProperty="bookNo" resultType="int" order="BEFORE">
+			SELECT MAX(BOOK_NO)+1 AS BOOKNO FROM BOOK
+		</selectKey>
+  		 INSERT INTO BOOK(BOOK_NO, BOOK_NAME, BOOK_WRITER, BOOK_COMPANY, BOOK_STORY, BOOK_IMAGE)
+		 VALUES(#{bookNo}, #{bookName}, #{bookWriter}, #{bookCompany}, #{bookStory}, #{bookImage})
+	</insert>
+	
+	<update id="bookUpdate" parameterType="co.micol.prj.book.vo.BookVO">
+		UPDATE book
+			<!-- if test의 내용이 값이 없지 않을 때 key와 값 업데이트한다는 내용 UPDATE 조건문은 set바깥에쓴다. -->
+			<set>
+				<if test="BookName != null">BOOK_NAME = #{bookName},</if> 
+				<if test="BookWriter != null">BOOK_WRITER = #{bookWriter},</if>
+				<if test="BookCompany != null">BOOK_COMPANY = #{bookCompany},</if>
+				<if test="bookStory != null">BOOK_BOOKSTORY = #{bookStory},</if>
+				<if test="bookImage != null">BOOK_IMAGE = #{bookImage}</if>
+			</set>
+				 WHERE BOOK_NAME=#{bookName}
+	
+	</update>
+	
+	<delete id="bookDelete" parameterType="co.micol.prj.book.vo.BookVO">
+		DELETE FROM BOOK WHERE BOOK_NAME=#{bookName}
+	
+	</delete>
+	
+	
+	
+</mapper>

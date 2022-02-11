@@ -13,6 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.prj.comm.Command;
 import co.micol.prj.command.Logout;
+import co.micol.prj.command.BestBook;
+import co.micol.prj.command.BestBookDetail;
+import co.micol.prj.command.BestBookForm;
+import co.micol.prj.command.BestBookInsert;
+import co.micol.prj.command.BestBookInsertForm;
+import co.micol.prj.command.BookList;
 import co.micol.prj.command.Event;
 import co.micol.prj.command.Login;
 import co.micol.prj.command.LoginForm;
@@ -47,6 +53,13 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeWriteForm.do", new NoticeWriterFrom());
 		map.put("/noticeSelect.do", new NoticeSelect());
 		map.put("/noticeWrite.do", new NoticeWrite());
+		
+		map.put("/librarySelect.do", new BestBook()); // 인기도서
+		map.put("/bestBookForm.do", new BestBookForm()); // 인기도서 메인페이지 (이미지 3개 + 더보기란)
+		map.put("/bestBookInsertForm.do", new BestBookInsertForm()); //인기도서페이지에서 인기도서 테이블 페이지 이동 요청하는 command
+		map.put("/bookList.do", new BookList()); // 인기도서 테이블페이지
+		map.put("/bestBookDetail.do", new BestBookDetail()); // 인기도서 상세페이지
+		map.put("/bestBookInsert.do", new BestBookInsert()); // 인기도서 등록(관리자만)
 	}
 
 	

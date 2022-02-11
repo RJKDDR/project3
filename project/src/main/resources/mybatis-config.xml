@@ -20,5 +20,6 @@
   </environments>
   <mappers>
     <mapper resource="co/micol/prj/member/service/member-map.xml"/>
+    <mapper resource="co/micol/prj/book/service/book-map.xml"/>
   </mappers>
 </configuration>
