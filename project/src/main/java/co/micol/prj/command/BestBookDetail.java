@@ -15,11 +15,15 @@ public class BestBookDetail implements Command {
 
 		BestBookService selectOneDao = new BestBookServiceImpl();
 		
-		BookVO vo = new BookVO();
-		
+		BookVO vo = new BookVO();	
 		vo.setBookName(request.getParameter("bookName"));
-		
-		int n = selectOneDao.bookSelect(vo);
+		vo = selectOneDao.bookSelect(vo);
+		if(vo != null) {
+			request.setAttribute("book", vo);
+		} else {
+			request.setAttribute("message", "검색된 자료 없음");
+			return "book/bookError";
+		}
 		
 		return "book/bestBookDetail";
 	}

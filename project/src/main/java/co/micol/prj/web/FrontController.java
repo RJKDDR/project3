@@ -1,6 +1,7 @@
 package co.micol.prj.web;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
@@ -45,6 +46,7 @@ import co.micol.prj.command.Register;
 import co.micol.prj.command.RegisterForm;
 import co.micol.prj.command.ReplyDelete;
 import co.micol.prj.command.ReplyWrite;
+import co.micol.prj.command.idCheck;
 
 
 @WebServlet("*.do")
@@ -65,6 +67,7 @@ public class FrontController extends HttpServlet {
 		map.put("/login.do", new Login());//로그인
 		map.put("/logOut.do", new Logout());//로그아웃
 		map.put("/register.do", new Register());//회원가입
+		map.put("/idCheck.do", new idCheck());//로그인체크
 		
 		map.put("/event.do", new Event());//문화행사
 		
@@ -106,20 +109,30 @@ public class FrontController extends HttpServlet {
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		String uri = request.getRequestURI();
-		String contextPath = request.getContextPath();
-		String page = uri.substring(contextPath.length());
-		
-		Command command = map.get(page);
-		String viewPage = command.exec(request, response);
-		
-		if(!viewPage.endsWith(".do")) {
-			viewPage = viewPage + ".tiles";		
-		}
-		
-		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
-		dispatcher.forward(request, response);
-	}
+		request.setCharacterEncoding("UTF-8");
+	      
+	      String uri = request.getRequestURI();
+	      String contextPath = request.getContextPath();
+	      String page = uri.substring(contextPath.length());
+	      
+	      Command command = map.get(page);
+	      String viewPage = command.exec(request, response);
+	      
+	      if(!viewPage.endsWith(".do")) {
+	    	  if(viewPage.startsWith("ajax:")) {
+	    		  // ajax 처리하는 부분이 들어와야 한다.
+	    		  PrintWriter out = response.getWriter(); // servlet객체를 호출
+	    		  out.print(viewPage.substring(5));
+	    		  return;
+	    	  }else {
+	    		  viewPage = viewPage + ".tiles";
+	    	  }
+	         viewPage = viewPage + ".tiles";
+	      }
+	      
+	      RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
+	      dispatcher.forward(request, response);
+	   }
 
-}
+
+	}

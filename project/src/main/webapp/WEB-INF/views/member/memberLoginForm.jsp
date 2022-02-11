@@ -28,7 +28,6 @@
                   <div class="form-group">
 		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">로 그 인</button>
 		            </div>
-		           <a href="#" class="fables-forth-text-color font-16 fables-second-hover-color underline mt-3 mb-4 m-lg-5 d-block">비밀번호 찾기</a>
                   <p class="fables-forth-text-color">아직 회원이 아니신가요 ?  <a href="registerForm.do" class="font-16 semi-font fables-second-text-color underline fables-main-hover-color ml-2">회원가입</a></p>
                 </form>
           </div>

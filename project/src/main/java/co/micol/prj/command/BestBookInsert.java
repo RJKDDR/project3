@@ -24,7 +24,7 @@ public class BestBookInsert implements Command {
 		vo.setBookCompany(request.getParameter("bookCompany"));
 		vo.setBookStory(request.getParameter("bookStory"));
 		vo.setBookImage(request.getParameter("bookImage"));
-
+		System.out.println(vo.getBookStory());
 		int n = bookDao.bookInsert(vo);
 
 		String viewPage = null;

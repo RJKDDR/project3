@@ -29,7 +29,7 @@
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="email">책 소개</label>
-                <textarea name="content" id="bookStory" name="bookStory" class="form-control"></textarea>
+                <textarea id="bookStory" name="bookStory" class="form-control"></textarea>
               </div>
             </div>
             
@@ -53,6 +53,7 @@
               <div class="col-md-12">
               <!-- href란에 html로만 만들어 놓은 bestBook란에 command해야 넘어가진다. -->
                  <input type="submit" value="Send Message" class="btn btn-primary">
+                <input type="button" value="목록" onclick="history.back(-1);">
               </div>
             </div>
             </form>

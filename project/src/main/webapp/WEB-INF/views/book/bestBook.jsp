@@ -32,7 +32,7 @@
     </div>
   </header>
 
-  <div class="page-section">
+  <!-- <div class="page-section">
     <div class="container">
       <div class="row">
         <div class="col-sm-10">
@@ -49,11 +49,10 @@
               <input type="text" class="form-control" placeholder="검색하세요..">
             </div>
           </form>
-        </div>
+        </div>-->
         
         <!-- 관리자만 글쓰기 보이게 해서 인기도서 올리는 버튼 -->
         <div class="col-sm-2 text-sm-right">
-         <input type="submit"  value="글쓰기" onclick="location.href='bestBookForm.do'">
         </div>
       </div>
 
@@ -63,11 +62,11 @@
             <div class="header">
               <div class="post-thumb">
               <!-- 이미지, 도서명, 출판사명, 지은이 모두 DB와 연결하여 데이터 가져오기 -->
-                <img src="assets/img/youTrue.png" alt="">
+                <img src="assets/img/bookImage/youTrue.png" alt="">
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="bestBookDetail.do">당신이 옳다 : 정혜신의 적정심리학</a></h5>
+              <h5 class="post-title">당신이 옳다 : 정혜신의 적정심리학</a></h5>
               <div class="post-date">출판사 : 해냄  <a>지은이 : 정혜신</a></div>
             </div>
           </div>
@@ -78,11 +77,11 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-thumb">
-                <img src="assets/img/summer.png" alt="">
+                <img src="assets/img/bookImage/summer.png" alt="">
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="bestBookDetail.do">바깥은<br>여름</a></h5>
+              <h5 class="post-title">바깥은<br>여름</a></h5>
               <div class="post-date">출판사 : 문학동네  <a>지은이 : 김애란</a></div>
             </div>
           </div>
@@ -92,11 +91,11 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-thumb">
-                <img src="assets/img/smile.png" alt="">
+                <img src="assets/img/bookImage/smile.png" alt="">
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="bestBookDetail.do">무례한 사람에게 웃으며 대처하는 법</a></h5>
+              <h5 class="post-title">무례한 사람에게 웃으며 대처하는 법</a></h5>
               <div class="post-date">출판사 : 가나출판사  <a>지은이 : 정문정</a></div>
             </div>
           </div>

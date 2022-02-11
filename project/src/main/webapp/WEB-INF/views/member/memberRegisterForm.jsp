@@ -51,8 +51,8 @@
                		 아이디를 입력해주세요.
               	</div>
             </div><br>
-              	<div class="col-md-6 mb-3"  ><br>
-   					<button style="" type="button" class="btn btn-primary btn-user btn-block"  id="idKey" onclick="idCheck()" value="No">ID 중복체크</button>
+              	<div class="col-md-3 mb-3"  ><br>
+   					<button style="margin-top: 7px;" type="button" class="btn btn-primary btn-user btn-block"  id="idKey" onclick="idCheck()" value="No">ID 중복체크</button>
  				</div>	
           </div>
           <div class="row">

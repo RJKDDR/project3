@@ -21,12 +21,7 @@
 
   <link rel="stylesheet" href="assets/css/theme.css">
   
-  <link rel="stylesheet" href="assets/css/noticeListStyle.css">
-  
-    <link href="assets/css/noticeFormbootstrap.min.css" rel="stylesheet">
-
-    <link href="assets/css/noticeFormstyle.css" rel="stylesheet">
-
+ 
 
 </head>
 <body>

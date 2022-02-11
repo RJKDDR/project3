@@ -32,11 +32,13 @@
 						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
 							aria-controls="account" aria-selected="true"> <i class="fa fa-user text-center mr-1"></i>
 							회원정보수정</a>
+							<c:if test="${author == 'micol' }">
 							<a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab"
 								aria-controls="application" aria-selected="false"> <i
 									class="fa fa-tv text-center mr-1"></i>
 								회원목록
 							</a>
+							</c:if>
 						<a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab"
 							aria-controls="security" aria-selected="false"> <i class="fa fa-home text-center mr-1"></i>
 							회원탈퇴

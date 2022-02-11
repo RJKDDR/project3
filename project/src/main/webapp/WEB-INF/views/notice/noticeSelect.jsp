@@ -18,7 +18,7 @@
 							<label for="inputEmail3" class="col-sm-2 col-form-label">제목</label>
 							<div class="col-sm-10">
 								<input class="form-control" type="text" id="noticeTitle"
-									value="${notice.noticeWriter }" name="noticeTitle"
+									value="${notice.noticeTitle }" name="noticeTitle"
 									readonly="readonly">
 							</div>
 						</div>
@@ -37,7 +37,7 @@
 						<div class="row mb-3">
 							<label for="inputPassword3" class="col-sm-2 col-form-label">작성자</label>
 							<div class="col-sm-10">
-								<input class="form-control" type="text" id="noticeWriter" name="noticeWriter" value="${name }" readonly="readonly">
+								<input class="form-control" type="text" id="noticeWriter" name="noticeWriter" value="${notice.noticeWriter }" readonly="readonly">
 							</div>
 						</div>
 						<div class="row mb-3">

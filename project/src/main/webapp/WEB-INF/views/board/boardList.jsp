@@ -10,10 +10,13 @@
 <link rel="stylesheet" href="assets/css/util.css">
 </head>
 <body>
-	<div class="limiter">
+	<div class="limiter"><br>
+		<div align="center">
+			<h3>회원게시판</h3>
+		</div>
 		<div class="container-table100">
 			<div class="wrap-table100">
-				<div class="table100 ver1 m-b-110">
+				<div class="table100 ver5 m-b-110">
 					<div class="table100-head">
 						<table>
 							<thead>
@@ -42,13 +45,13 @@
 								</c:forEach>
 							</tbody>
 						</table>
-					</div><br>
-					<div>
-						<c:if test="${not empty id }">
-						<button type="button" onclick="location.href='boardWriteForm.do'">질문</button>
-						</c:if>
 					</div>
 				</div>
+				<div>
+						<c:if test="${not empty id }">
+						<button type="button" onclick="location.href='boardWriteForm.do'" class="btn btn-primary">글쓰기</button>
+						</c:if>
+					</div>
 			</div>
 		</div>
 		<div>
