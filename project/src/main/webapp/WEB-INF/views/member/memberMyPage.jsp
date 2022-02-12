@@ -23,7 +23,7 @@
 				<div class="profile-tab-nav border-right">
 					<div class="p-4">
 						<div class="img-circle text-center mb-3">
-							<img src="assets/img/member.jpg" alt="Image" class="shadow">
+							<img src="assets/img/member.jpg" alt="Image" >
 						</div>
 						<h4 class="text-center">${name }</h4>
 					</div>
@@ -32,7 +32,7 @@
 						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
 							aria-controls="account" aria-selected="true"> <i class="fa fa-user text-center mr-1"></i>
 							회원정보수정</a>
-							<c:if test="${author == 'micol' }">
+							<c:if test="${id == 'micol' }">
 							<a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab"
 								aria-controls="application" aria-selected="false"> <i
 									class="fa fa-tv text-center mr-1"></i>

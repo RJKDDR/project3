@@ -41,9 +41,9 @@
       dayMaxEvents: true, // allow "more" link when too many events
       events: [
         {
-          color: '#FF0000',
-          title: 'holiday', 
-          start: '2022-02-07'
+          color: '#9500ff',
+          title: 'project', 
+          start: '2022-02-12'
         }
       ]
     });
@@ -55,10 +55,10 @@
 <style>
 
   body {
-    margin: 40px 10px;
+   
     padding: 0;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
+    
   }
 
   #calendar {
@@ -69,12 +69,11 @@
 </style>
 </head>
 <body>
-
+	
+  <form action="eventCalender.do" method="post"><br><br><br>
   <div id='calendar'>
-  <form action="eventCalender.do" method="post">
-  
-  </form>
   </div>
+  </form>
 
 </body>
 </html>

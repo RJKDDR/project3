@@ -15,7 +15,7 @@
             <h2 class="mb-4 font-weight-medium text-secondary">도서정보입력</h2>
             <form action="${pageContext.request.contextPath}/bestBookInsert.do" method="post">
             <div class="row form-group">
-            	<!-- input에 id(jsp)와 name(Java)에서 사용될 값을 지정해줌 DB로 요청할 command 작성시 vo객체 만들 때 값이 들어간다. -->
+               <!-- input에 id(jsp)와 name(Java)에서 사용될 값을 지정해줌 DB로 요청할 command 작성시 vo객체 만들 때 값이 들어간다. -->
               <div class="col-md-6 mb-3 mb-md-0">
                 <label class="text-black" for="fname">책 이름</label>
                 <input type="text" id="bookName" name="bookName" class="form-control">

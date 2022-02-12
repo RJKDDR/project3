@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="assets/css/util.css">
 </head>
 <body>
-	<div class="limiter"><br>
+	<div class="limiter"><br><br>
 		<div align="center">
-			<h3>회원게시판</h3>
+			<h1>자유게시판</h1>
 		</div>
 		<div class="container-table100">
 			<div class="wrap-table100">

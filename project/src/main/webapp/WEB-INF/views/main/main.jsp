@@ -15,7 +15,7 @@
           <div class="col-md-6 py-5 wow fadeInLeft">
             <h1 class="mb-4">Yedam도서관</h1>
             <p class="text-lg text-grey mb-5">Welcome Yedam Library</p>
-            <a href="#" class="btn btn-primary btn-split">Watch Video <div class="fab"><span class="mai-play"></span></div></a>
+            <a href="#" class="btn btn-primary btn-split">Read Book <div class="fab"><span class="mai-play"></span></div></a>
           </div>
           <div class="col-md-6 py-5 wow zoomIn">
             <div class="img-fluid text-center">

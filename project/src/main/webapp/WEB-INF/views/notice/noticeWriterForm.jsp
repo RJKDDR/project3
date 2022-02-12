@@ -21,12 +21,8 @@
 									name="noticeTitle"> ${notice.noticeTitle }
 							</div>
 						</div>
-						<div class="row mb-3">
-							<div class="col-sm-10">
 								<input class="form-control" type="hidden" id="noticeDate"
 									name="noticeDate">${notice.noticeDate }
-							</div>
-						</div>
 						<div class="row mb-3">
 							<label for="inputPassword3" class="col-sm-2 col-form-label">작성자</label>
 							<div class="col-sm-10">
@@ -49,7 +45,7 @@
 
 							<input type="button" value="목록" class="btn btn-primary"
 								onclick="location.href='notice.do'">
-						</div>
+						</div><br><br>
 						
 					</form>
 					

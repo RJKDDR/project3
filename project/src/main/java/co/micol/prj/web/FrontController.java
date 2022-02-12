@@ -100,9 +100,9 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeWriterForm.do", new NoticeWriterForm()); //공지사항 등록폼
 		map.put("/noticeSelect.do", new NoticeSelect()); //공지사항 보기
 		map.put("/noticeWrite.do", new NoticeWrite()); //공지사항등록목록
-		map.put("/noticeUpdate.do", new NoticeUpdate());
-		map.put("/noticeDelete.do", new NoticeDelete());
-		map.put("/noticeUpdateForm.do", new NoticeUpdateForm());
+		map.put("/noticeUpdate.do", new NoticeUpdate());//공지사항 업데이트
+		map.put("/noticeDelete.do", new NoticeDelete());//공지사항 삭제
+		map.put("/noticeUpdateForm.do", new NoticeUpdateForm());//공지사항업데이트폼
 		
 		
 	}

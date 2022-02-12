@@ -10,151 +10,151 @@
   
 </head>
 <body>
-  <!-- Back to top button -->
-  <div class="back-to-top"></div>
-  
-  <header>
 
-
-    <div class="container" >
-      <div class="page-banner">
-        <div class="row justify-content-center align-items-center h-100">
-          <div class="col-md-6">
-      	<!--  img src="assets/img/library.jpg"-->
-            <nav aria-label="Breadcrumb">
-              <ul class="breadcrumb justify-content-center py-0 bg-transparent">
-              </ul>
-            </nav>
-            <h1 class="text-center">인기도서</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- <div class="page-section">
-    <div class="container">
+	<div align="center"><br><br>	
+   <h1>인기도서</h1>
+	</div>
+      <div align="right" class="col-sm-12 ">
+      		 <input type="button" value="더보기" class="btn btn-primary" onclick="location.href='bookList.do'">       
+       </div>
+       <br>
+       <br>
       <div class="row">
-        <div class="col-sm-10">
-          <form action="#" class="form-search-blog">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <select id="categories" class="custom-select bg-light">
-                  <option>전체검색</option>
-                  <option value="#">도서명 검색</option>
-                  <option value="#">지은이 검색</option>
-                  <option value="#">출판사 검색</option>
-                </select>
-              </div>
-              <input type="text" class="form-control" placeholder="검색하세요..">
-            </div>
-          </form>
-        </div>-->
-        
-        <!-- 관리자만 글쓰기 보이게 해서 인기도서 올리는 버튼 -->
-        <div class="col-sm-2 text-sm-right">
-        </div>
-      </div>
-
-      <div class="row my-5">
-        <div class="col-lg-4 py-3">
+        <div class="col-sm-3 ">
           <div class="card-blog">
             <div class="header">
               <div class="post-thumb">
               <!-- 이미지, 도서명, 출판사명, 지은이 모두 DB와 연결하여 데이터 가져오기 -->
-                <img src="assets/img/bookImage/youTrue.png" alt="">
+                <a href="#">
+                <img src="assets/img/book/매일 읽는 헨리 데이비드 소로.jpg" alt="">
+                </a>
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title">당신이 옳다 : 정혜신의 적정심리학</a></h5>
-              <div class="post-date">출판사 : 해냄  <a>지은이 : 정혜신</a></div>
+              <h5 class="post-title">매일 읽는 헨리 데이비드 소로</h5>
+              <div class="post-date">출판사 : 니케북스  지은이 : 헨리 데이비드 소로</div>
             </div>
           </div>
-        </div>
+        </div><br>
         
-        
-        <div class="col-lg-4 py-3">
+       
+        <div class="col-sm-3 ">
           <div class="card-blog">
             <div class="header">
               <div class="post-thumb">
-                <img src="assets/img/bookImage/summer.png" alt="">
+                <a href="#">
+                <img src="assets/img/book/럭키 드로우.jpg" alt="">
+                </a>
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title">바깥은<br>여름</a></h5>
-              <div class="post-date">출판사 : 문학동네  <a>지은이 : 김애란</a></div>
+               <h5 class="post-title">럭키 드로우 나만의 길을 찾을 때까지 인생의 레버를 당기는 법</h5>
+              <div class="post-date">출판사 : 다산북스  <a>지은이 : 드로우앤드류 </a></div>
             </div>
           </div>
-        </div>
+        </div> <br>
 
-        <div class="col-lg-4 py-3">
+        <div class="col-sm-3 ">
           <div class="card-blog">
             <div class="header">
               <div class="post-thumb">
-                <img src="assets/img/bookImage/smile.png" alt="">
+                <a href="#">
+                <img src="assets/img/book/세븐테크.jpg" alt="">
+                </a>
               </div>
             </div>
             <div class="body">
-              <h5 class="post-title">무례한 사람에게 웃으며 대처하는 법</a></h5>
-              <div class="post-date">출판사 : 가나출판사  <a>지은이 : 정문정</a></div>
+              <h5 class="post-title">세븐 테크 3년 후 당신의 미래를 바꿀 7가지 기술</h5>
+              <div class="post-date">출판사 : 웅진지식하우스   <a>지은이 : 김미경 , 김상균 , 김세규</a></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-thumb">
+              <a href="#">
+                <img src="assets/img/book/10년 후 100배 오를 암호화폐에 투자하라.jpg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <h5 class="post-title">10년 후 100배 오를 암호화폐에 투자하라</h5>
+              <div class="post-date">출판사 : 나비의활주로  지은이 : 박종한 </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        	<br><br>
+         <div class="row">
+        <div class="col-sm-3 ">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-thumb">
+                <a href="#">
+                <img src="assets/img/book/엑시트 EXIT 플래너.jpg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <h5 class="post-title">엑시트 EXIT 플래너</h5>
+              <div class="post-date">출판사 : 지혜로  <a>지은이 : 송희창</a> </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-thumb">
+                <a href="#">
+                <img src="assets/img/book/슈가레인 카페 디저트 클래스.jpg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <h5 class="post-title">슈가레인 카페 디저트 클래스</h5>
+              <div class="post-date">출판사 : 비타북스  지은이 : 조한빛 </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-3 ">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-thumb">
+               <a href="#">
+                <img src="assets/img/book/어서 오세요, 휴남동 서점입니다.jpg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <h5 class="post-title">어서 오세요, 휴남동 서점입니다</h5>
+              <div class="post-date">출판사 : 클레이하우스  지은이 : 황보름</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-thumb">
+              <a href="#">
+                <img src="assets/img/book/코스모사피엔스 - 우주의 기원 그리고 인간의 진화.jpg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <h5 class="post-title">코스모사피엔스 - 우주의 기원 그리고 인간의 진화</h5>
+              <div class="post-date">출판사 : ㈜소미미디어  지은이 : 존 핸즈</div>
             </div>
           </div>
         </div>
       </div>
+      <br>
         
- 
 
-      
- <input type="button" value="더보기" class="btn btn-primary" onclick="location.href='bookList.do'">
-    </div>
-  </div>
-
-  <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-3 py-3">
-          <h3>YEDAM Library</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis in iusto eligendi iure.</p>
-
-          <div class="social-media-button">
-            <a href="#"><span class="mai-logo-facebook-f"></span></a>
-            <a href="#"><span class="mai-logo-twitter"></span></a>
-            <a href="#"><span class="mai-logo-google-plus-g"></span></a>
-            <a href="#"><span class="mai-logo-instagram"></span></a>
-            <a href="#"><span class="mai-logo-youtube"></span></a>
-          </div>
-        </div>
-        <div class="col-lg-3 py-3">
-          <h5>Company</h5>
-          <ul class="footer-menu">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Advertise</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Help & Support</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 py-3">
-          <h5>Contact Us</h5>
-          <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-          <a href="#" class="footer-link">+00 1122 3344 5566</a>
-          <a href="#" class="footer-link">seogram@temporary.com</a>
-        </div>
-        <div class="col-lg-3 py-3">
-          <h5>Newsletter</h5>
-          <p>Get updates, news or events on your mail.</p>
-          <form action="#">
-            <input type="text" class="form-control" placeholder="Enter your email..">
-            <button type="submit" class="btn btn-success btn-block mt-2">Subscribe</button>
-          </form>
-        </div>
-      </div>
-
-      <p class="text-center" id="copyright">Copyright &copy; 2022. This template design and develop by <a href="https://macodeid.com/" target="_blank">MACode ID</a></p>
-    </div>
-    
-    
-  </footer>
 
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 

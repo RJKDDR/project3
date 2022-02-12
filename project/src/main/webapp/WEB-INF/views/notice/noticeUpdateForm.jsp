@@ -12,7 +12,7 @@
 		<div class="container-fluid pt-4 px-4">
 			<div class="col-sm-12 col-xl-6">
 				<div class="bg-light rounded h-100 p-4">
-					<h6 class="mb-4">글 수 정</h6>
+					<h6 class="mb-4">공지사항 수정</h6>
 					<form id="frm" action="noticeUpdate.do" method="post">
 						<div class="row mb-3">
 							<label for="inputEmail3" class="col-sm-2 col-form-label">제목</label>

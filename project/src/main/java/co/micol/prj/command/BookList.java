@@ -12,15 +12,15 @@ import co.micol.prj.comm.Command;
 
 public class BookList implements Command {
 
-	@Override
-	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		BestBookService bestBookServiceDao = new BestBookServiceImpl();
-		List<BookVO> list =  bestBookServiceDao.bookSelectList();
-		
-		request.setAttribute("books", list);
-		
-		return "book/bookList";
-		
-	}
+   @Override
+   public String exec(HttpServletRequest request, HttpServletResponse response) {
+      BestBookService bestBookServiceDao = new BestBookServiceImpl();
+      List<BookVO> list =  bestBookServiceDao.bookSelectList();
+      
+      request.setAttribute("books", list);
+      
+      return "book/bookList";
+      
+   }
 
 }

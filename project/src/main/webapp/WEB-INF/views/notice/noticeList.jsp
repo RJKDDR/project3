@@ -12,6 +12,7 @@
 <body>
 	<div align="center">
 		<br>
+		<br>
 		<div>
 			<h1>공지사항</h1>
 		</div>

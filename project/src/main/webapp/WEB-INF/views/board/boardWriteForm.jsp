@@ -12,7 +12,7 @@
     <div class="container-fluid pt-4 px-4">
         <div class="col-sm-12 col-xl-6">
             <div >
-                <h6 class="mb-4">&emsp;Q&A 글쓰기</h6>
+                <h6 class="mb-4">&emsp;자유게시판 글쓰기</h6>
                 <form id="frm" action="boardWrite.do" method="post">
                     <div class="row mb-3">
                         <label for="subject" class="col-sm-2 col-form-label">제목</label>

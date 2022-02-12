@@ -28,7 +28,7 @@ SELECT * FROM NOTICE WHERE NOTICE_ID = #{noticeId}
 
 <insert id="noticeInsert" parameterType="co.micol.prj.notice.vo.NoticeVO">
       <selectKey keyProperty="noticeId" resultType="int" order="BEFORE">
-         SELECT MAX(NOTICE_ID)+1 AS NOTICEID FROM NOTICE
+         SELECT COUNT(NOTICE_ID)+1 AS NOTICEID FROM NOTICE
       </selectKey>
          INSERT INTO NOTICE(NOTICE_ID, NOTICE_WRITER, NOTICE_TITLE, NOTICE_SUBJECT, NOTICE_DATE)
          VALUES (#{noticeId}, #{noticeWriter}, #{noticeTitle}, #{noticeSubject}, #{noticeDate})
