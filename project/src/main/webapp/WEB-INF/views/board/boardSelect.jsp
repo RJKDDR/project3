@@ -16,8 +16,12 @@
 }
 .deleteBtn{
    position: relative;
-   left:70px;
+   left:100px;
+   bottom:5px;
 
+}
+.relpyTable td{
+border-bottom:1px solid #dcdac2;
 }
 </style>
 <body>
@@ -111,12 +115,12 @@
          <form id="frm2" action="replyWrite.do" method="post">
             
             <div>
-               <table style="border-top: 1px solid black;  width: 890px;">
+               <table class="relpyTable" style="border-top: 1px solid black; width: 860px;">
                   
                   <c:forEach items="${replys }" var="reply">
                      <c:if test="${reply.BIdx == board.BIdx }">
                         <tr>
-                           <td width="150"><br>
+                           <td width="155" ><br>
                               <div>
                                  ${reply.reWriter }
                                  <font size="2" color="gray">${reply.reDate }작성</font>
@@ -140,9 +144,9 @@
                </table><br><br>
                <c:if test="${!empty id }">
                   <div>
-                  <div class="col-md-5" align="left" style="margin-right:30px" ><h6 style="font-weight:bold">댓글을 등록 해주세요</h6></div>
+                  <div class="col-md-5" align="left" style="margin-right:82px" ><h6 style="font-weight:bold">댓글을 등록 해주세요</h6></div><br>
                      <input type="hidden" id="replyWriter" name="replyWriter" value="${name}" readonly="readonly">
-                     <textarea rows="3" cols="111" id="replyContent" name="replyContent" required="required"></textarea>
+                     <textarea rows="3" cols="105" id="replyContent" name="replyContent" required="required"></textarea>
                      <br>
                      <div class="replyBtn">
                         <input type="submit" class="btn btn-primary btn-sm" value="댓글등록">

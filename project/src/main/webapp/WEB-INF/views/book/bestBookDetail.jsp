@@ -16,15 +16,16 @@
 
 <link rel="stylesheet" href="../assets/css/maicons.css">
 
-<link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+<style type="text/css">
+html, body {
 
-<link rel="stylesheet" href="../assets/vendor/animate/animate.css">
-
-<link rel="stylesheet" href="../assets/css/theme.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-</head>
-<style>
+  height:100%; 
+  overflow:hidden
+}
 img{ 
 	position: absolute; 
 	left: 700px; 
@@ -32,20 +33,18 @@ img{
 </style>
 <body>
 
-	<!-- Back to top button -->
-	<div class="back-to-top"></div>
-
-	<header> </header>
 
 	<div class="page-section pt-5">
 		<div class="container">
 			<nav aria-label="Breadcrumb">
 				<ul class="breadcrumb p-0 mb-0 bg-transparent">
 					<li class="breadcrumb-item"><a href="main.do">Home</a></li>
-					<li class="breadcrumb-item"><a href="librarySelect.do">인기도서</a></li>
-					<li class="breadcrumb-item active">인기도서 상세페이지</li>
+					<li class="breadcrumb-item"><a href="bookList.do">자료검색</a></li>
+					<li class="breadcrumb-item active">도서 상세페이지</li>
 				</ul>
 			</nav>
+			<br>
+			<br>
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="blog-single-wrap">
@@ -55,9 +54,9 @@ img{
 						
 						<div class="post-meta">
 							<div class="post-bookCompany">
-								<span><i class="fa-solid fa-book"></i><span class="mai-pin"></span> </span> ${book.bookWriter}&nbsp;&nbsp;&nbsp;
-								<span >	</i><span class="mai-business"></span>
-								</span> ${book.bookCompany}
+								<span><i class="fas fa-user-edit"></i></span>  ${book.bookWriter}&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+								<span ><i class="fas fa-building"></i></span>
+								 ${book.bookCompany}
 							</div>
 						</div>
 						<div >
@@ -69,6 +68,16 @@ img{
 			</div>
 		</div>
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
 
 
 </body>

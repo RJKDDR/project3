@@ -41,7 +41,7 @@
       dayMaxEvents: true, // allow "more" link when too many events
       events: [
         {
-          color: '#9500ff',
+          color: '#799fbf',
           title: 'project', 
           start: '2022-02-12'
         }

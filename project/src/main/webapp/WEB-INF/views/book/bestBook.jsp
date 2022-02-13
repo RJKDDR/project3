@@ -7,7 +7,9 @@
 <html lang="kr">
 <head>
   <meta charset="UTF-8">
-  
+
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 </head>
 <body>
 

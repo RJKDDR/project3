@@ -12,7 +12,7 @@
 </resultMap>
 
    <select id="bookSelectList" resultMap="bookMap">
-        SELECT BOOK_NO, BOOK_NAME, BOOK_WRITER, BOOK_COMPANY
+        SELECT BOOK_NO, BOOK_NAME, BOOK_WRITER, BOOK_COMPANY, BOOK_IMAGE
       FROM BOOK ORDER BY BOOK_NO DESC
    </select>
    

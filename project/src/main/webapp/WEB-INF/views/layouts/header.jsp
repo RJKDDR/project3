@@ -19,7 +19,7 @@
               <a class="nav-link" href="main.do">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="librarySelect.do">자료검색</a>
+              <a class="nav-link" href="bookList.do">자료검색</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="event.do">문화행사</a>
